@@ -545,7 +545,7 @@ address {
     background-color: #31d0aa;
 }
 
-.footer_media_link:active {
+.footer_media_link:focus {
     background-color: #31d0aa;
 }
 
