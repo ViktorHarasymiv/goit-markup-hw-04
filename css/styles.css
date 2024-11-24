@@ -110,10 +110,6 @@ a {
     padding: 120px 0;
 }
 
-svg {
-    aspect-ratio: 1;
-}
-
 /*  H E A D E R  */
 
 .header_body {
@@ -122,6 +118,7 @@ svg {
     align-items: center;
 
     border-bottom: 1px solid var(--cornflower);
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header_wrap {
@@ -171,6 +168,7 @@ svg {
     font-weight: 500;
     color: #2e2f42;
 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav_link::after {
@@ -181,7 +179,7 @@ svg {
     width: 100%;
     height: 4px;
 
-    bottom: 0;
+    bottom: -1px;
     left: 0;
 
     border-radius: 2px;
@@ -224,6 +222,8 @@ address {
 
 .adress_link {
     color: #434455;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress_link:hover,
@@ -238,10 +238,13 @@ address {
 /*  H E R O  S E C T I O N  */
 
 .hero_section {
+    margin: 0 auto;
     padding: 188px 0;
 
+    max-width: 1440px;
+
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/images/background.jpg);
-    background-size: 1440px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center
 }
@@ -321,6 +324,8 @@ address {
     padding: 24px 0;
     margin-bottom: 8px;
 
+    height: 112px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -388,7 +393,7 @@ address {
 
 .team_soc_link_list {
     display: flex;
-
+    justify-content: center;
     gap: 24px;
 }
 
@@ -397,11 +402,31 @@ address {
     line-height: 0;
 }
 
+.media_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #4d5ae5;
+    border-radius: 50%;
+
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.media_link:hover {
+    background-color: #404bbf;
+}
+
+.media_link:focus {
+    background-color: #404bbf;
+}
 
 .social_icon {
     fill: #4d5ae5;
 
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 40px;
+    height: 40px;
 }
 
 .social_icon:hover {
@@ -454,6 +479,7 @@ address {
 }
 
 .overlay_block {
+
     position: absolute;
     top: 0;
     bottom: 0;
@@ -470,7 +496,6 @@ address {
     color: var(--cloud);
 }
 
-
 .portfolio_link:hover,
 .portfolio_link:hover .overlay_block {
     transform: translateY(0);
@@ -485,6 +510,7 @@ address {
 
 .footer_section {
     display: flex;
+    align-items: baseline
 }
 
 .logo_block {
@@ -515,8 +541,9 @@ address {
     gap: 16px;
 }
 
-.social_block h4 {
+.soc_title {
     margin-bottom: 16px;
+
     font-weight: 500;
     color: var(--white);
 }
