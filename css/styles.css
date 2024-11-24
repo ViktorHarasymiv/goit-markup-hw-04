@@ -541,6 +541,14 @@ address {
     gap: 16px;
 }
 
+.footer_media_link:hover {
+    background-color: #31d0aa;
+}
+
+.footer_media_link:active {
+    background-color: #31d0aa;
+}
+
 .soc_title {
     margin-bottom: 16px;
 
